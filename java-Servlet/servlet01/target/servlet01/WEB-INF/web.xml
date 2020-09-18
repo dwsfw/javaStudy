@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0"
+          metadata-complete="true">
+  <!-- 指定servlet规范的版本3.0 -->
+
+<context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+</context-param>
+<!--  注册servlet-->
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>com.tlb.servlet.HelloServlet</servlet-class>
+  </servlet>
+<!--  servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>getc</servlet-name>
+    <servlet-class>com.tlb.servlet.GetServlet</servlet-class>
+  </servlet>
+  <!--  servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>getc</servlet-name>
+    <url-pattern>/getc</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>gp</servlet-name>
+    <servlet-class>com.tlb.servlet.Serveltdemo</servlet-class>
+  </servlet>
+  <!--  servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>gp</servlet-name>
+    <url-pattern>/gp</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>sd4</servlet-name>
+    <servlet-class>com.tlb.servlet.ServletDemo1</servlet-class>
+  </servlet>
+  <!--  servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>sd4</servlet-name>
+    <url-pattern>/sd4</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>sd5</servlet-name>
+    <servlet-class>com.tlb.servlet.ServletDemo3</servlet-class>
+  </servlet>
+  <!--  servlet请求路径-->
+  <servlet-mapping>
+    <servlet-name>sd5</servlet-name>
+    <url-pattern>/sd5</url-pattern>
+  </servlet-mapping>
+
+</web-app>
